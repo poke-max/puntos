@@ -1,0 +1,12 @@
+.avanzado tr {
+height: 10px;
+
+}
+
+.sold {
+font-weight: bold;
+color: #fff;
+background: #bc0000;
+text-transform: uppercase;
+
+}

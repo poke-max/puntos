@@ -1,0 +1,2118 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script type="text/javascript" src="js/bootstrap-select.min.js"></script>
+      <link rel="stylesheet" href="css/bootstrap-select.min.css">
+      <link rel="stylesheet" href="css/avanzado.css">
+
+
+    <meta charset="utf-8">
+	<link rel="shortcut icon" type="image/ico" href="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, user-scalable=no">
+	<title>Pokémon Masters Lista</title>
+	<link rel="stylesheet" type="text/css" href="media/css/jquery.data Tables.css">
+	<link rel="stylesheet" type="text/css" href="resources/syntax/shCore.css">
+	<link rel="stylesheet" type="text/css" href="resources/demo</head>.css">
+	<style type="text/css" class="init"></style>
+	<link rel="stylesheet" type="text/css" href="css/master.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-select.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="js/bootstrap-select.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script type="text/javascript" language="javascript" src="media/js/jquery.dataTables.min.js"></script>
+	<script type="text/javascript" language="javascript" src="resources/syntax/shCore.js"></script>
+	<script type="text/javascript" language="javascript" src="resources/demo.js"></script>
+  <script type="text/javascript" language="javascript" src="js/automatico.js"></script>
+	<script type="text/javascript" language="javascript" class="init"></script>
+
+    <link rel="stylesheet" href="css/material.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="https://cdn.jsdelivr.net/gh/javve/list.js@1.5.0/dist/list.min.js"></script>
+    <meta charset="utf-8">
+
+    <script type="text/javascript">
+    $('form').submit(function(e){ e.preventDefault(); });
+  </script>
+
+
+    <script type="text/javascript" language="javascript" class="init">
+
+
+
+
+    /* Create an array with the values of all the input boxes in a column */
+    $.fn.dataTable.ext.order['dom-text'] = function  ( settings, col )
+    {
+    return this.api().column( col, {order:'index'} ).nodes().map( function ( td, i ) {
+      return $('input', td).val();
+    } );
+    }
+
+    /* Create an array with the values of all the input boxes in a column, parsed as numbers */
+    $.fn.dataTable.ext.order['dom-text-numeric'] = function  ( settings, col )
+    {
+    return this.api().column( col, {order:'index'} ).nodes().map( function ( td, i ) {
+      return $('input', td).val() * 1;
+    } );
+    }
+
+    $.fn.dataTable.ext.order['dom-text-numeric'] = function  ( settings, col )
+    {
+    return this.api().column( col, {order:'index'} ).nodes().map( function ( td, i ) {
+      return $('input', td).val() * 1;
+    } );
+    }
+
+    /* Create an array with the values of all the select options in a column */
+    $.fn.dataTable.ext.order['dom-select'] = function  ( settings, col )
+    {
+    return this.api().column( col, {order:'index'} ).nodes().map( function ( td, i ) {
+      return $('select', td).val();
+    } );
+    }
+
+    /* Create an array with the values of all the checkboxes in a column */
+    $.fn.dataTable.ext.order['dom-checkbox'] = function  ( settings, col )
+    {
+    return this.api().column( col, {order:'index'} ).nodes().map( function ( td, i ) {
+      return $('input', td).prop('checked') ? '1' : '0';
+    } );
+    }
+
+    /* Initialise the table with the required column ordering data types */
+    $(document).ready(function() {
+    	$('#example').DataTable( {
+        "scrollX": true,
+
+        "paging":   false,
+        "oLanguage": {
+        "sSearch": "Buscar  ",
+        },
+        "info":     false,
+
+    		"columns": [
+    			null,
+        	{ "orderDataType": "dom-text-numeric" },
+          { "orderDataType": "dom-text" },
+          null,
+    		  null,
+    			{ "orderDataType": "dom-select" },
+    			{ "orderDataType": "dom-text-numeric" },
+    			null
+        ],
+
+
+
+
+    	} );
+    } );
+
+
+    	</script>
+
+
+  </head>
+
+  <body onload="sunshine()" onclick="sunshine()" class="dt-example">
+
+	<div class="container">
+
+
+    <div id="users">
+      <o style="font-size: 17px;font-weight:bold">Pokémon Masters</o>
+      <input type="button" class="btn btn-outline-dark" onclick="autom()" style="font-weight:bold;margin-left:210px" value="Config. AUTO">
+      <select data-style="btn-info" style="font-weight:bold" class="btn btn-outline-dark" data-width="fit" id="selectField">
+        <option value="Neutro" selected>Neutro</option>
+        <!--TIPOS-->
+        <option value="Acero">Acero</option>
+        <option value="Agua">Agua</option>
+        <option value="Bicho">Bicho</option>
+        <option value="Dragon">Dragón</option>
+        <option value="Electrico">Eléctrico</option>
+        <option value="Fantasma">Fantasma</option>
+        <option value="Fuego">Fuego</option>
+        <option value="Hada">Hada</option>
+        <option value="Hielo">Hielo</option>
+        <option value="Lucha">Lucha</option>
+        <option value="Normal">Normal</option>
+        <option value="Planta">Planta</option>
+        <option value="Psiquico">Psíquico</option>
+        <option value="Roca">Roca</option>
+        <option value="Siniestro">Siniestro</option>
+        <option value="Tierra">Tierra</option>
+        <option value="Veneno">Veneno</option>
+        <option value="Volador">Volador</option>
+        </select>
+
+
+          </div>
+      <table id="example" class="mdl-data-table mdl-js-data-table">
+        <div id="mdl-table">
+          <thead>
+            <tr>
+              <th>Pokémon</th>
+              <th>Ataque</th>
+              <th>Tipo</th>
+						<th>Cat.</th>
+						<th>Movimiento</th>
+						<th>Pot.</th>
+						<th>PTS.</th>
+						<th>Mej.</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+						<td><lit hidden>Mewtwo</lit>
+              <details>
+                <summary class="first" value="Mewtwo">Mewtwo</summary><br>
+                <table class="avanzado">
+                  <tbody>
+                    <tr>
+                      <td>Crítico</td>
+                      <td><input id="criMewtwo" type="checkbox"></td>
+                    </tr>
+                    <tr>
+                      <td>Aumento</td>
+                      <td><select class="selectpicker" data-width="fit" id="aumMewtwo">
+          					      <option value="1">0</option>
+          					      <option value="1.25">+1</option>
+          					      <option value=1.4>+2</option>
+          					      <option value="1.5">+3</option>
+          					      <option value="1.6">+4</option>
+          					      <option value="1.7">+5</option>
+          					      <option value="1.8">+6</option>
+          					    </select>
+                     </td>
+                    </tr>
+                    <tr>
+                      <td>TC +Pot</td>
+                      <td><input size="4" maxlength="2" class="input1" size="3" id="maspMewtwo"></td>
+                    </tr>
+                    <tr>
+                      <td>TC +Atq</td>
+                      <td><input size="4" maxlength="3" class="input1" size="3" id="masaMewtwo"></td>
+                    </tr>
+                    <tr>
+                      <td>Pasiva def.</td>
+                      <td>
+                        <select class="selectpicker" data-width="fit" id="pasdMewtwo">
+                          <option value="1">Ninguna</option>
+                          <option value="1.2">Ultravínculo +2</option>
+          					    </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>+Pasiva</td>
+                      <td>
+                        <select class="selectpicker" data-width="fit" id="pasMewtwo">
+                        <option value="1" selected="selected">Ninguna</option>
+                        <option value=1.18>Condensador +3</option>
+                        <option value=1.1>Cr. Potente +1</option>
+                        <option value="1.2">Cr. Potente +2</option>
+                      </select>
+                     </td>
+                     </tr>
+                     <tr>
+                       <td><input type="button" onclick="sunshine()" value="Aceptar"></td>
+                     </tr>
+                   </tbody>
+                </table>
+                </details>
+					    <td><input type="text" class="input1" size="4" type="text" maxlength="3" id="atkMewtwo" name="row-52-age" value="480" placeholder="480"></td>
+					    <td><input id="tipoMewtwo" value="Fantasma" hidden>
+					        <p hidden>Fantasma</p><input value="Fantasma" class="tipo" type="image" src="img/Fantasma.png"></td>
+					    <td value="Especial">
+					      <p hidden>Especial</p><input class="tipo2" type="image" src="img/Especial.png">
+					    </td>
+					    <td value="Bola Sombra">
+					      <g>Bola Sombra</g>
+					    </td>
+					    <td><select data-width="fit" class="selectpicker" size="1" id="potMewtwo">
+					        <option value="99">99</option>
+					        <option value="104">104</option>
+					        <option value="108">108</option>
+					        <option value="113">113</option>
+					        <option selected value="118">118</option>
+					      </select>
+					    </td>
+					    <td><input disabled size="7" class="input2" id="ptsMewtwo"></td>
+					    <td><output id="perMewtwo"></output></td>
+					    </tr>
+
+              <tr>
+              <td><lit hidden>Mewtwo</lit>
+                <details>
+                  <summary class="first" value="MewtwoP">Mewtwo</summary><br>
+                  <table class="avanzado">
+                    <tbody>
+                      <tr>
+                        <td>Crítico</td>
+                        <td><input id="criMewtwoP" type="checkbox"></td>
+                      </tr>
+                      <tr>
+                        <td>Aumento</td>
+                        <td><select class="selectpicker" data-width="fit" id="aumMewtwoP">
+                            <option value="1">0</option>
+                            <option value="1.25">+1</option>
+                            <option value=1.4>+2</option>
+                            <option value="1.5">+3</option>
+                            <option value="1.6">+4</option>
+                            <option value="1.7">+5</option>
+                            <option value="1.8">+6</option>
+                          </select>
+                       </td>
+                      </tr>
+                      <tr>
+                        <td>TC +Pot</td>
+                        <td><input size="4" maxlength="2" class="input1" size="3" id="maspMewtwoP"></td>
+                      </tr>
+                      <tr>
+                        <td>TC +Atq</td>
+                        <td><input size="4" maxlength="3" class="input1" size="3" id="masaMewtwoP"></td>
+                      </tr>
+                      <tr>
+                        <td>Pasiva def.</td>
+                        <td>
+                          <select class="selectpicker" data-width="fit" id="pasdMewtwoP">
+                            <option value="1">Ninguna</option>
+                            <option value="1.2">Ultravínculo +2</option>
+                          </select>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>+Pasiva</td>
+                        <td>
+                          <select class="selectpicker" data-width="fit" id="pasMewtwoP">
+                          <option value="1" selected="selected">Ninguna</option>
+                          <option value=1.18>Condensador +3</option>
+                          <option value=1.1>Cr. Potente +1</option>
+                          <option value="1.2">Cr. Potente +2</option>
+                        </select>
+                       </td>
+                       </tr>
+                       <tr>
+                         <td><input type="button" onclick="sunshine()" value="Aceptar"></td>
+                       </tr>
+                     </tbody>
+                  </table>
+                  </details>
+                <td><input type="text" class="input1" size="4" type="text" maxlength="3" id="atkMewtwoP" name="row-52-age" value="480" placeholder="480"></td>
+                <td><input id="tipoMewtwoP" value="Psiquico" hidden>
+                    <p hidden>Psiquico</p><input value="Psiquico" class="tipo" type="image" src="img/Psiquico.png"></td>
+                <td value="Especial">
+                  <p hidden>Especial</p><input class="tipo2" type="image" src="img/Especial.png">
+                </td>
+                <td value="Psiquico">
+                  <g>Psíquico</g>
+                </td>
+                <td><select data-width="fit" class="selectpicker" size="1" id="potMewtwoP">
+                    <option value="99">99</option>
+                    <option value="104">104</option>
+                    <option value="108">108</option>
+                    <option value="113">113</option>
+                    <option selected value="118">118</option>
+                  </select>
+                </td>
+                <td><input disabled size="7" class="input2" id="ptsMewtwoP"></td>
+                <td><output id="perMewtwoP"></output></td>
+                </tr>
+
+
+
+
+					    <!-- Lycanroc R A -->
+
+              <tr>
+               <td><lit hidden>Lycanroc</lit>
+                <details>
+                  <summary class="first" value="Lycanroc">Lycanroc</summary><br>
+                  <table class="avanzado">
+                    <tbody>
+                      <tr>
+                        <td>Crítico</td>
+                        <td><input id="criLycanroc" type="checkbox"></td>
+                      </tr>
+                      <tr>
+                        <td>Aumento</td>
+                        <td><select class="selectpicker" data-width="fit" id="aumLycanroc">
+                            <option value="1">0</option>
+                            <option value="1.25">+1</option>
+                            <option value=1.4>+2</option>
+                            <option value="1.5">+3</option>
+                            <option style="background:#aaa"  value="1.6">+4</option>
+                            <option value="1.7">+5</option>
+                            <option value="1.8">+6</option>
+                          </select>
+                       </td>
+                      </tr>
+                      <tr>
+                        <td>TC +Pot</td>
+                        <td><input size="4" maxlength="2" class="input1" size="3" id="maspLycanroc"></td>
+                      </tr>
+                      <tr>
+                        <td>TC +Atq</td>
+                        <td><input size="4" maxlength="3" class="input1" size="3" id="masaLycanroc"></td>
+                      </tr>
+                      <tr>
+                        <td>Pasiva def.</td>
+                        <td>
+                          <select class="selectpicker" data-width="fit" id="pasdLycanroc">
+                            <option value="1">Ninguna</option>
+                          </select>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>+Pasiva</td>
+                        <td>
+                          <select class="selectpicker" data-width="fit" id="pasLycanroc">
+                          <option value="1" selected="selected">Ninguna</option>
+                          <option value=1.18>Condensador +3</option>
+                          <option value=1.1>Cr. Potente +1</option>
+                          <option value="1.2">Cr. Potente +2</option>
+                        </select>
+                       </td>
+                       </tr>
+                       <tr>
+                         <td><input type="button" onclick="sunshine()" value="Aceptar"></td>
+                       </tr>
+                     </tbody>
+                  </table>
+                  </details>
+                <td><input class="input1" size="4" type="text" maxlength="3" id="atkLycanroc" name="row-52-age" value="401" placeholder="401"></td>
+                <td><input id="tipoLycanroc" value="Roca" hidden>
+                    <p hidden>Roca</p><input value="Roca" class="tipo" type="image" src="img/Roca.png"></td>
+                <td value="Fisico">
+                  <p hidden>Fisico</p><input class="tipo2" type="image" src="img/Fisico.png">
+                </td>
+                <td value="Roca Afilada">
+                  <g>Roca Afilada</g>
+                </td>
+                <td><select data-width="fit" class="selectpicker" size="1" id="potLycanroc">
+                    <option selected value="100">100</option>
+                    <option value="105">105</option>
+                    <option value="110">110</option>
+                    <option value="115">115</option>
+                    <option value="120">120</option>
+                  </select>
+                </td>
+                <td><input disabled size="7" class="input2" id="ptsLycanroc"></td>
+                <td><output id="perLycanroc" ></output></td>
+                </tr>
+
+
+                <!-- Mismagius-->
+
+                <tr>
+                 <td><lit hidden>Mismagius</lit>
+                  <details>
+                    <summary class="first" value="Mismagius">Mismagius</summary><br>
+                    <table class="avanzado">
+                      <tbody>
+                        <tr>
+                          <td>Crítico</td>
+                          <td><input id="criMismagius" type="checkbox"></td>
+                        </tr>
+                        <tr>
+                          <td>Aumento</td>
+                          <td><select class="selectpicker" data-width="fit" id="aumMismagius">
+                              <option value="1">0</option>
+                              <option value="1.25">+1</option>
+                              <option value=1.4>+2</option>
+                              <option value="1.5">+3</option>
+                              <option value="1.6">+4</option>
+                              <option value="1.7">+5</option>
+                              <option value="1.8">+6</option>
+                            </select>
+                         </td>
+                        </tr>
+                        <tr>
+                          <td>TC +Pot</td>
+                          <td><input size="4" maxlength="2" class="input1" size="3" id="maspMismagius"></td>
+                        </tr>
+                        <tr>
+                          <td>TC +Atq</td>
+                          <td><input size="4" maxlength="3" class="input1" size="3" id="masaMismagius"></td>
+                        </tr>
+                        <tr>
+                          <td>Pasiva def.</td>
+                          <td>
+                            <select class="selectpicker" data-width="fit" id="pasdMismagius">
+                            <option value="1.2">Pot. Intrépida +4</option>
+                            </select>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>+Pasiva</td>
+                          <td>
+                            <select class="selectpicker" data-width="fit" id="pasMismagius">
+                            <option value="1" selected="selected">Ninguna</option>
+                            <option value=1.18>Condensador +3</option>
+                            <option value=1.1>Cr. Potente +1</option>
+                            <option value="1.2">Cr. Potente +2</option>
+                          </select>
+                         </td>
+                         </tr>
+                         <tr>
+                           <td><input type="button" onclick="sunshine()" value="Aceptar"></td>
+                         </tr>
+                       </tbody>
+                    </table>
+                    </details>
+                  <td><input class="input1" size="4" type="text" maxlength="3" id="atkMismagius" name="row-52-age" value="323" placeholder="323"></td>
+                  <td><input id="tipoMismagius" value="Fantasma" hidden>
+                      <p hidden>Fantasma</p><input value="Fantasma" class="tipo" type="image" src="img/Fantasma.png"></td>
+                  <td value="Especial">
+                    <p hidden>Especial</p><input class="tipo2" type="image" src="img/Especial.png">
+                  </td>
+                  <td value="Bola Sombra">
+                    <g>Bola Sombra</g>
+                  </td>
+                  <td><select data-width="fit" class="selectpicker" size="1" id="potMismagius">
+                    <option selected value="99">99</option>
+                    <option value="104">104</option>
+                    <option value="108">108</option>
+                    <option value="113">113</option>
+                    <option value="118">118</option>
+                    </select>
+                  </td>
+                  <td><input disabled size="7" class="input2" id="ptsMismagius"></td>
+                  <td><output id="perMismagius" ></output></td>
+                  </tr>
+
+
+
+<!--Charizard Onda Ignea -->
+
+
+<tr>
+ <td><lit hidden>Charizard</lit>
+  <details>
+    <summary class="first" value="Charizard">Charizard</summary><br>
+    <table class="avanzado">
+      <tbody>
+        <tr>
+          <td>Crítico</td>
+          <td><input id="criCharizard" type="checkbox"></td>
+        </tr>
+        <tr>
+          <td>Aumento</td>
+          <td><select class="selectpicker" data-width="fit" id="aumCharizard">
+              <option value="1">0</option>
+              <option value="1.25">+1</option>
+              <option value=1.4>+2</option>
+              <option value="1.5">+3</option>
+              <option value="1.6">+4</option>
+              <option value="1.7">+5</option>
+              <option value="1.8">+6</option>
+            </select>
+         </td>
+        </tr>
+        <tr>
+          <td>TC +Pot</td>
+          <td><input size="4" maxlength="2" class="input1" size="3" id="maspCharizard"></td>
+        </tr>
+        <tr>
+          <td>TC +Atq</td>
+          <td><input size="4" maxlength="3" class="input1" size="3" id="masaCharizard"></td>
+        </tr>
+        <tr>
+          <td>Pasiva def.</td>
+          <td>
+            <select class="selectpicker" data-width="fit" id="pasdCharizard">
+            <option value="1">Ninguna</option>
+            <option value="1.5">Dia Soleado</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>+Pasiva</td>
+          <td>
+            <select class="selectpicker" data-width="fit" id="pasCharizard">
+            <option value="1" selected="selected">Ninguna</option>
+            <option value=1.18>Condensador +3</option>
+            <option value=1.1>Cr. Potente +1</option>
+            <option value="1.2">Cr. Potente +2</option>
+          </select>
+         </td>
+         </tr>
+         <tr>
+           <td><input type="button" onclick="sunshine()" value="Aceptar"></td>
+         </tr>
+       </tbody>
+    </table>
+    </details>
+  <td><input class="input1" size="4" type="text" maxlength="3" id="atkCharizard" name="row-52-age" value="380" placeholder="380"></td>
+  <td><input id="tipoCharizard" value="Fuego" hidden>
+      <p hidden>Fuego</p><input value="Fuego" class="tipo" type="image" src="img/Fuego.png"></td>
+  <td value="Especial">
+    <p hidden>Especial</p><input class="tipo2" type="image" src="img/Especial.png">
+  </td>
+  <td value="Onda Ígnea">
+    <g>Onda Ígnea</g>
+  </td>
+  <td><select data-width="fit" class="selectpicker" size="1" id="potCharizard">
+    <option selected value="109">109</option>
+    <option value="114">114</option>
+    <option value="119">119</option>
+    <option value="125">125</option>
+    <option value="130">130</option>
+    </select>
+  </td>
+  <td><input disabled size="7" class="input2" id="ptsCharizard"></td>
+  <td><output id="perCharizard" ></output></td>
+  </tr>
+
+
+<!--Charizard A-->
+  <tr>
+   <td><lit hidden>Charizard</lit>
+    <details>
+      <summary class="first" value="CharizardA">Charizard</summary><br>
+      <table class="avanzado">
+        <tbody>
+          <tr>
+            <td>Crítico</td>
+            <td><input id="criCharizardA" type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>Aumento</td>
+            <td><select class="selectpicker" data-width="fit" id="aumCharizardA">
+                <option value="1">0</option>
+                <option value="1.25">+1</option>
+                <option value=1.4>+2</option>
+                <option value="1.5">+3</option>
+                <option value="1.6">+4</option>
+                <option value="1.7">+5</option>
+                <option value="1.8">+6</option>
+              </select>
+           </td>
+          </tr>
+          <tr>
+            <td>TC +Pot</td>
+            <td><input size="4" maxlength="2" class="input1" size="3" id="maspCharizardA"></td>
+          </tr>
+          <tr>
+            <td>TC +Atq</td>
+            <td><input size="4" maxlength="3" class="input1" size="3" id="masaCharizardA"></td>
+          </tr>
+          <tr>
+            <td>Pasiva def.</td>
+            <td>
+              <select class="selectpicker" data-width="fit" id="pasdCharizardA">
+                <option value="1">Ninguna</option>
+              <option value="1.5">Dia Soleado</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>+Pasiva</td>
+            <td>
+              <select class="selectpicker" data-width="fit" id="pasCharizardA">
+              <option value="1" selected="selected">Ninguna</option>
+              <option value=1.24>Condensador +3</option>
+              <option value=1.1>Cr. Potente +1</option>
+              <option value="1.2">Cr. Potente +2</option>
+            </select>
+           </td>
+           </tr>
+           <tr>
+             <td><input type="button" onclick="sunshine()" value="Aceptar"></td>
+           </tr>
+         </tbody>
+      </table>
+      </details>
+    <td><input class="input1" size="4" type="text" maxlength="3" id="atkCharizardA" name="row-52-age" value="380" placeholder="380"></td>
+    <td><input id="tipoCharizardA" value="Fuego" hidden>
+        <p hidden>Fuego</p><input value="Fuego" class="tipo" type="image" src="img/Fuego.png"></td>
+    <td value="Especial">
+      <p hidden>Especial</p><input class="tipo2" type="image" src="img/Especial.png">
+    </td>
+    <td value="Anillo Ígneo">
+      <g>Anillo Ígneo</g>
+    </td>
+    <td><select data-width="fit" class="selectpicker" size="1" id="potCharizardA">
+      <option selected value="178">178</option>
+      <option value="186">186</option>
+      <option value="195">195</option>
+      <option value="204">204</option>
+      <option value="213">213</option>
+      </select>
+    </td>
+    <td><input disabled size="7" class="input2" id="ptsCharizardA"></td>
+    <td><output id="perCharizardA" ></output></td>
+    </tr>
+
+    <tr>
+     <td><lit hidden>MegaCharizard</lit>
+      <details>
+        <summary class="first" value="MegaCharizard">Mega-Charizard</summary><br>
+        <table class="avanzado">
+          <tbody>
+            <tr>
+              <td>Crítico</td>
+              <td><input id="criMegaCharizard" type="checkbox"></td>
+            </tr>
+            <tr>
+              <td>Aumento</td>
+              <td><select class="selectpicker" data-width="fit" id="aumMegaCharizard">
+                  <option value="1">0</option>
+                  <option value="1.25">+1</option>
+                  <option value=1.4>+2</option>
+                  <option value="1.5">+3</option>
+                  <option value="1.6">+4</option>
+                  <option value="1.7">+5</option>
+                  <option value="1.8">+6</option>
+                </select>
+             </td>
+            </tr>
+            <tr>
+              <td>TC +Pot</td>
+              <td><input size="4" maxlength="2" class="input1" size="3" id="maspMegaCharizard"></td>
+            </tr>
+            <tr>
+              <td>TC +Atq</td>
+              <td><input size="4" maxlength="3" class="input1" size="3" id="masaMegaCharizard"></td>
+            </tr>
+            <tr>
+              <td>Pasiva def.</td>
+              <td>
+                <select class="selectpicker" data-width="fit" id="pasdMegaCharizard">
+                  <option value="1">Ninguna</option>
+                <option value="1.5">Dia Soleado</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>+Pasiva</td>
+              <td>
+                <select class="selectpicker" data-width="fit" id="pasMegaCharizard">
+                <option value="1" selected="selected">Ninguna</option>
+                <option value=1.24>Condensador +3</option>
+                <option value=1.1>Cr. Potente +1</option>
+                <option value="1.2">Cr. Potente +2</option>
+              </select>
+             </td>
+             </tr>
+             <tr>
+               <td><input type="button" onclick="sunshine()" value="Aceptar"></td>
+             </tr>
+           </tbody>
+        </table>
+        </details>
+      <td><input class="input1" size="4" type="text" maxlength="3" id="atkMegaCharizard" name="row-52-age" value="456" placeholder="456"></td>
+      <td><input id="tipoMegaCharizard" value="Fuego" hidden>
+          <p hidden>Fuego</p><input value="Fuego" class="tipo" type="image" src="img/Fuego.png"></td>
+      <td value="Especial">
+        <p hidden>Especial</p><input class="tipo2" type="image" src="img/Especial.png">
+      </td>
+      <td value="Anillo Ígneo">
+        <g>Anillo Ígneo</g>
+      </td>
+      <td><select data-width="fit" class="selectpicker" size="1" id="potMegaCharizard">
+        <option selected value="178">178</option>
+        <option value="186">186</option>
+        <option value="195">195</option>
+        <option value="204">204</option>
+        <option value="213">213</option>
+        </select>
+      </td>
+      <td><input disabled size="7" class="input2" id="ptsMegaCharizard"></td>
+      <td><output id="perMegaCharizard" ></output></td>
+      </tr>
+
+
+<!--Solgaleo Onda Certera-->
+
+
+<tr>
+  <td><lit hidden>Solgaleo</lit>
+    <details>
+      <summary class="first" value="Solgaleo">Solgaleo</summary><br>
+      <table class="avanzado">
+        <tbody>
+          <tr>
+            <td>Crítico</td>
+            <td><input id="criSolgaleo" type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>Aumento</td>
+            <td><select class="selectpicker" data-width="fit" id="aumSolgaleo">
+                <option value="1">0</option>
+                <option value="1.25">+1</option>
+                <option value=1.4>+2</option>
+                <option value="1.5">+3</option>
+                <option value="1.6">+4</option>
+                <option value="1.7">+5</option>
+                <option value="1.8">+6</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>TC +Pot</td>
+            <td><input size="4" maxlength="2" class="input1" size="3" id="maspSolgaleo"></td>
+          </tr>
+          <tr>
+            <td>TC +Atq</td>
+            <td><input size="4" maxlength="3" class="input1" size="3" id="masaSolgaleo"></td>
+          </tr>
+          <tr>
+            <td>Pasiva def.</td>
+            <td>
+              <select class="selectpicker" data-width="fit" id="pasdSolgaleo">
+                <option value="1">Ninguna</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>+Pasiva</td>
+            <td>
+              <select class="selectpicker" data-width="fit" id="pasSolgaleo">
+                <option value="1" selected="selected">Ninguna</option>
+                <option value=1.18>Condensador +3</option>
+                <option value=1.1>Cr. Potente +1</option>
+                <option value="1.2">Cr. Potente +2</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><input type="button" onclick="sunshine()" value="Aceptar"></td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
+  <td><input class="input1" size="4" type="text" maxlength="3" id="atkSolgaleo" name="row-52-age" value="355" placeholder="355"></td>
+  <td><input id="tipoSolgaleo" value="Lucha" hidden>
+    <p hidden>Lucha</p><input value="Lucha" class="tipo" type="image" src="img/Lucha.png">
+  </td>
+  <td value="Especial">
+    <p hidden>Especial</p><input class="tipo2" type="image" src="img/Especial.png">
+  </td>
+  <td value="Onda Certera">
+    <g>Onda Certera</g>
+  </td>
+  <td><select data-width="fit" class="selectpicker" size="1" id="potSolgaleo">
+      <option value="109">142</option>
+      <option value="149">149</option>
+      <option value="156">156</option>
+      <option value="163">163</option>
+      <option selected value="170">170</option>
+    </select>
+  </td>
+  <td><input disabled size="7" class="input2" id="ptsSolgaleo"></td>
+  <td><output id="perSolgaleo"></output></td>
+</tr>
+
+
+<!--Solgaleo Met.-->
+
+<tr>
+  <td> <lit hidden>Solgaleo</lit>
+    <details>
+      <summary class="first" value="SolgaleoMM">Solgaleo</summary><br>
+      <table class="avanzado">
+        <tbody>
+          <tr>
+            <td>Crítico</td>
+            <td><input id="criSolgaleoM" type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>Aumento</td>
+            <td><select class="selectpicker" data-width="fit" id="aumSolgaleoM">
+                <option value="1">0</option>
+                <option value="1.25">+1</option>
+                <option value=1.4>+2</option>
+                <option value="1.5">+3</option>
+                <option value="1.6">+4</option>
+                <option value="1.7">+5</option>
+                <option value="1.8">+6</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>TC +Pot</td>
+            <td><input size="4" maxlength="2" class="input1" size="3" id="maspSolgaleoM"></td>
+          </tr>
+          <tr>
+            <td>TC +Atq</td>
+            <td><input size="4" maxlength="3" class="input1" size="3" id="masaSolgaleoM"></td>
+          </tr>
+          <tr>
+            <td>Pasiva def.</td>
+            <td>
+              <select class="selectpicker" data-width="fit" id="pasdSolgaleoM">
+                <option value="1">Ninguna</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>+Pasiva</td>
+            <td>
+              <select class="selectpicker" data-width="fit" id="pasSolgaleoM">
+                <option value="1" selected="selected">Ninguna</option>
+                <option value=1.18>Condensador +3</option>
+                <option value=1.1>Cr. Potente +1</option>
+                <option value="1.2">Cr. Potente +2</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><input type="button" onclick="sunshine()" value="Aceptar"></td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
+  <td><input class="input1" size="4" type="text" maxlength="3" id="atkSolgaleoM" name="row-52-age" value="409" placeholder="409"></td>
+  <td><input id="tipoSolgaleoM" value="Acero" hidden>
+    <p hidden>Acero</p><input value="Acero" class="tipo" type="image" src="img/Acero.png">
+  </td>
+  <td value="Fisico">
+    <p hidden>Fisico</p><input class="tipo2" type="image" src="img/Fisico.png">
+  </td>
+  <td value="Meteoimpacto">
+    <g>Meteoimpacto</g>
+  </td>
+  <td><select data-width="fit" class="selectpicker" size="1" id="potSolgaleoM">
+      <option value="100">100</option>
+      <option value="105">105</option>
+      <option value="110">110</option>
+      <option value="115">115</option>
+      <option selected value="120">120</option>
+    </select>
+  </td>
+  <td><input disabled size="7" class="input2" id="ptsSolgaleoM"></td>
+  <td><output id="perSolgaleoM"></output></td>
+</tr>
+
+
+<!-- Dragonite -->
+<tr>
+  <td>
+    <details>
+      <lit hidden>Dragonite</lit>
+      <summary class="first" value="DragoniteM">Dragonite</summary><br>
+      <table class="avanzado">
+        <tbody>
+          <tr>
+            <td>Crítico</td>
+            <td><input id="criDragonite" type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>Aumento</td>
+            <td><select class="selectpicker" data-width="fit" id="aumDragonite">
+                <option value="1">0</option>
+                <option value="1.25">+1</option>
+                <option value=1.4>+2</option>
+                <option value="1.5">+3</option>
+                <option value="1.6">+4</option>
+                <option value="1.7">+5</option>
+                <option value="1.8">+6</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>TC +Pot</td>
+            <td><input size="4" maxlength="2" class="input1" size="3" id="maspDragonite"></td>
+          </tr>
+          <tr>
+            <td>TC +Atq</td>
+            <td><input size="4" maxlength="3" class="input1" size="3" id="masaDragonite"></td>
+          </tr>
+          <tr>
+            <td>Pasiva def.</td>
+            <td>
+              <select class="selectpicker" data-width="fit" id="pasdDragonite">
+                <option value="1">Ninguna</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>+Pasiva</td>
+            <td>
+              <select class="selectpicker" data-width="fit" id="pasDragonite">
+                <option value="1" selected="selected">Ninguna</option>
+                <option value=1.18>Condensador +3</option>
+                <option value=1.1>Cr. Potente +1</option>
+                <option value="1.2">Cr. Potente +2</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><input type="button" onclick="sunshine()" value="Aceptar"></td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
+  <td><input class="input1" size="4" type="text" maxlength="3" id="atkDragonite" name="row-52-age" value="402" placeholder="402"></td>
+  <td><input id="tipoDragonite" value="Dragon" hidden>
+    <p hidden>Dragon</p><input value="Dragon" class="tipo" type="image" src="img/Dragon.png">
+  </td>
+  <td value="Especial">
+    <p hidden>Especial</p><input class="tipo2" type="image" src="img/Especial.png">
+  </td>
+  <td value="Hiperrayo">
+    <g>Hiperrayo</g>
+  </td>
+  <td><select data-width="fit" class="selectpicker" size="1" id="potDragonite">
+      <option value="223">223</option>
+      <option value="234">234</option>
+      <option value="245">245</option>
+      <option value="256">256</option>
+      <option value="267">267</option>
+    </select>
+  </td>
+  <td><input disabled size="7" class="input2" id="ptsDragonite"></td>
+  <td><output id="perDragonite"></output></td>
+</tr>
+
+
+<!--Sceptile Lluevehojas -->
+
+<tr>
+  <td>
+    <details>
+      <lit hidden>Sceptile</lit>
+      <summary class="first" value="SceptileM">Sceptile</summary><br>
+      <table class="avanzado">
+        <tbody>
+          <tr>
+            <td>Crítico</td>
+            <td><input id="criSceptile" type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>Aumento</td>
+            <td><select class="selectpicker" data-width="fit" id="aumSceptile">
+                <option value="1">0</option>
+                <option value="1.25">+1</option>
+                <option value=1.4>+2</option>
+                <option value="1.5">+3</option>
+                <option value="1.6">+4</option>
+                <option value="1.7">+5</option>
+                <option value="1.8">+6</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>TC +Pot</td>
+            <td><input size="4" maxlength="2" class="input1" size="3" id="maspSceptile"></td>
+          </tr>
+          <tr>
+            <td>TC +Atq</td>
+            <td><input size="4" maxlength="3" class="input1" size="3" id="masaSceptile"></td>
+          </tr>
+          <tr>
+            <td>Pasiva def.</td>
+            <td>
+              <select class="selectpicker" data-width="fit" id="pasdSceptile">
+                <option value="1">Ninguna</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>+Pasiva</td>
+            <td>
+              <select class="selectpicker" data-width="fit" id="pasSceptile">
+                <option value="1" selected="selected">Ninguna</option>
+                <option value=1.18>Condensador +3</option>
+                <option value=1.1>Cr. Potente +1</option>
+                <option value="1.2">Cr. Potente +2</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><input type="button" onclick="sunshine()" value="Aceptar"></td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
+  <td><input class="input1" size="4" type="text" maxlength="3" id="atkSceptile" name="row-52-age" value="379" placeholder="379"></td>
+  <td><input id="tipoSceptile" value="Planta" hidden>
+    <p hidden>Planta</p><input value="Planta" class="tipo" type="image" src="img/Planta.png">
+  </td>
+  <td value="Especial">
+    <p hidden>Especial</p><input class="tipo2" type="image" src="img/Especial.png">
+  </td>
+  <td value="Lluevehojas">
+    <g>Lluevehojas</g>
+  </td>
+  <td><select data-width="fit" class="selectpicker" size="1" id="potSceptile">
+      <option value="136">136</option>
+      <option value="142">142</option>
+      <option value="149">149</option>
+      <option value="156">156</option>
+      <option value="163">163</option>
+    </select>
+  </td>
+  <td><input disabled size="7" class="input2" id="ptsSceptile"></td>
+  <td><output id="perSceptile"></output></td>
+</tr>
+
+
+
+<!--Kingdra CD-->
+<tr>
+  <td>
+    <details>
+      <lit hidden>Kingdra</lit>
+      <summary class="first" value="Kingdra">Kingdra</summary><br>
+      <table class="avanzado">
+        <tbody>
+          <tr>
+            <td>Crítico</td>
+            <td><input id="criKingdra" type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>Aumento</td>
+            <td><select class="selectpicker" data-width="fit" id="aumKingdra">
+                <option value="1">0</option>
+                <option value="1.25">+1</option>
+                <option value=1.4>+2</option>
+                <option value="1.5">+3</option>
+                <option value="1.6">+4</option>
+                <option value="1.7">+5</option>
+                <option value="1.8">+6</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>TC +Pot</td>
+            <td><input size="4" maxlength="2" class="input1" size="3" id="maspKingdra"></td>
+          </tr>
+          <tr>
+            <td>TC +Atq</td>
+            <td><input size="4" maxlength="3" class="input1" size="3" id="masaKingdra"></td>
+          </tr>
+          <tr>
+            <td>Pasiva def.</td>
+            <td>
+              <select class="selectpicker" data-width="fit" id="pasdKingdra">
+                <option value="1">Ninguna</option>
+                <option value="1.5">Pot. Pluvial +5</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>+Pasiva</td>
+            <td>
+              <select class="selectpicker" data-width="fit" id="pasKingdra">
+                <option value="1" selected="selected">Ninguna</option>
+                <option value=1.18>Condensador +3</option>
+                <option value=1.1>Cr. Potente +1</option>
+                <option value="1.2">Cr. Potente +2</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><input type="button" onclick="sunshine()" value="Aceptar"></td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
+  <td><input class="input1" size="4" type="text" maxlength="3" id="atkKingdra" name="row-52-age" value="309" placeholder="309"></td>
+  <td><input id="tipoKingdra" value="Dragon" hidden>
+    <p hidden>Dragon</p><input value="Dragon" class="tipo" type="image" src="img/Dragon.png">
+  </td>
+  <td value="Especial">
+    <p hidden>Especial</p><input class="tipo2" type="image" src="img/Especial.png">
+  </td>
+  <td value="Cometa Draco">
+    <g>Cometa Draco</g>
+  </td>
+  <td><select data-width="fit" class="selectpicker" size="1" id="potKingdra">
+      <option value="136">136</option>
+      <option value="142">142</option>
+      <option value="149">149</option>
+      <option value="156">156</option>
+      <option value="163">163</option>
+    </select>
+  </td>
+  <td><input disabled size="7" class="input2" id="ptsKingdra"></td>
+  <td><output id="perKingdra"></output></td>
+</tr>
+
+
+
+<!-- Houndoom AL.-->
+<tr>
+  <td>
+    <details>
+      <lit hidden>Houndoom</lit>
+      <summary class="first" value="Houndoom">Houndoom</summary><br>
+      <table class="avanzado">
+        <tbody>
+          <tr>
+            <td>Crítico</td>
+            <td><input id="criHoundoom" type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>Aumento</td>
+            <td><select class="selectpicker" data-width="fit" id="aumHoundoom">
+                <option value="1">0</option>
+                <option value="1.25">+1</option>
+                <option value=1.4>+2</option>
+                <option value="1.5">+3</option>
+                <option value="1.6">+4</option>
+                <option value="1.7">+5</option>
+                <option value="1.8">+6</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>TC +Pot</td>
+            <td><input size="4" maxlength="2" class="input1" size="3" id="maspHoundoom"></td>
+          </tr>
+          <tr>
+            <td>TC +Atq</td>
+            <td><input size="4" maxlength="3" class="input1" size="3" id="masaHoundoom"></td>
+          </tr>
+          <tr>
+            <td>Pasiva def.</td>
+            <td>
+              <select class="selectpicker" data-width="fit" id="pasdHoundoom">
+                <option value="1">Ninguna</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>+Pasiva</td>
+            <td>
+              <select class="selectpicker" data-width="fit" id="pasHoundoom">
+                <option value="1" selected="selected">Ninguna</option>
+                <option value=1.18>Condensador +3</option>
+                <option value=1.1>Cr. Potente +1</option>
+                <option value="1.2">Cr. Potente +2</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><input type="button" onclick="sunshine()" value="Aceptar"></td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
+  <td><input class="input1" size="4" type="text" maxlength="3" id="atkHoundoom" name="row-52-age" value="346" placeholder="346"></td>
+  <td><input id="tipoHoundoom" value="Siniestro" hidden>
+    <p hidden>Siniestro</p><input value="Siniestro" class="tipo" type="image" src="img/Siniestro.png">
+  </td>
+  <td value="Especial">
+    <p hidden>Especial</p><input class="tipo2" type="image" src="img/Especial.png">
+  </td>
+  <td value="Alarido">
+    <g>Alarido</g>
+  </td>
+  <td><select data-width="fit" class="selectpicker" size="1" id="potHoundoom">
+      <option value="39">39</option>
+      <option value="51">51</option>
+      <option value="53">53</option>
+      <option value="56">56</option>
+      <option value="58">58</option>
+    </select>
+  </td>
+  <td><input disabled size="7" class="input2" id="ptsHoundoom"></td>
+  <td><output id="perHoundoom"></output></td>
+</tr>
+
+
+<!--MegaHoundoom a-->
+<tr>
+  <td>
+    <details>
+      <lit hidden>MegaHoundoom</lit>
+      <summary class="first" value="MegaHoundoom">Mega-Houndoom</summary><br>
+      <table class="avanzado">
+        <tbody>
+          <tr>
+            <td>Crítico</td>
+            <td><input id="criMegaHoundoom" type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>Aumento</td>
+            <td><select class="selectpicker" data-width="fit" id="aumMegaHoundoom">
+                <option value="1">0</option>
+                <option value="1.25">+1</option>
+                <option value=1.4>+2</option>
+                <option value="1.5">+3</option>
+                <option value="1.6">+4</option>
+                <option value="1.7">+5</option>
+                <option value="1.8">+6</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>TC +Pot</td>
+            <td><input size="4" maxlength="2" class="input1" size="3" id="maspMegaHoundoom"></td>
+          </tr>
+          <tr>
+            <td>TC +Atq</td>
+            <td><input size="4" maxlength="3" class="input1" size="3" id="masaMegaHoundoom"></td>
+          </tr>
+          <tr>
+            <td>Pasiva def.</td>
+            <td>
+              <select class="selectpicker" data-width="fit" id="pasdMegaHoundoom">
+                <option value="1">Ninguna</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>+Pasiva</td>
+            <td>
+              <select class="selectpicker" data-width="fit" id="pasMegaHoundoom">
+                <option value="1" selected="selected">Ninguna</option>
+                <option value=1.18>Condensador +3</option>
+                <option value=1.1>Cr. Potente +1</option>
+                <option value="1.2">Cr. Potente +2</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><input type="button" onclick="sunshine()" value="Aceptar"></td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
+  <td><input class="input1" size="4" type="text" maxlength="3" id="atkMegaHoundoom" name="row-52-age" value="380" placeholder="380"></td>
+  <td><input id="tipoMegaHoundoom" value="Siniestro" hidden>
+    <p hidden>Siniestro</p><input value="Siniestro" class="tipo" type="image" src="img/Siniestro.png">
+  </td>
+  <td value="Especial">
+    <p hidden>Especial</p><input class="tipo2" type="image" src="img/Especial.png">
+  </td>
+  <td value="Pulso Umbrío">
+    <g>Pulso Umbrío</g>
+  </td>
+  <td><select data-width="fit" class="selectpicker" size="1" id="potMegaHoundoom">
+      <option value="95">95</option>
+      <option value="99">99</option>
+      <option value="104">104</option>
+      <option value="109">109</option>
+      <option value="114">114</option>
+    </select>
+  </td>
+  <td><input disabled size="7" class="input2" id="ptsMegaHoundoom"></td>
+  <td><output id="perMegaHoundoom"></output></td>
+</tr>
+
+
+<!--Zebstrika a-->
+<tr>
+  <td>
+    <details>
+      <lit hidden>Zebstrika</lit>
+      <summary class="first" value="Zebstrika">Zebstrika</summary><br>
+      <table class="avanzado">
+        <tbody>
+          <tr>
+            <td>Crítico</td>
+            <td><input id="criZebstrika" type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>Aumento</td>
+            <td><select class="selectpicker" data-width="fit" id="aumZebstrika">
+                <option value="1">0</option>
+                <option value="1.25">+1</option>
+                <option value=1.4>+2</option>
+                <option value="1.5">+3</option>
+                <option value="1.6">+4</option>
+                <option value="1.7">+5</option>
+                <option value="1.8">+6</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>TC +Pot</td>
+            <td><input size="4" maxlength="2" class="input1" size="3" id="maspZebstrika"></td>
+          </tr>
+          <tr>
+            <td>TC +Atq</td>
+            <td><input size="4" maxlength="3" class="input1" size="3" id="masaZebstrika"></td>
+          </tr>
+          <tr>
+            <td>Pasiva def.</td>
+            <td>
+              <select class="selectpicker" data-width="fit" id="pasdZebstrika">
+                <option value="1">Ninguna</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>+Pasiva</td>
+            <td>
+              <select class="selectpicker" data-width="fit" id="pasZebstrika">
+                <option value="1" selected="selected">Ninguna</option>
+                <option value=1.18>Condensador +3</option>
+                <option value=1.1>Cr. Potente +1</option>
+                <option value="1.2">Cr. Potente +2</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><input type="button" onclick="sunshine()" value="Aceptar"></td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
+  <td><input class="input1" size="4" type="text" maxlength="3" id="atkZebstrika" name="row-52-age" value="306" placeholder="306"></td>
+  <td><input id="tipoZebstrika" value="Electrico" hidden>
+    <p hidden>Electrico</p><input value="Electrico" class="tipo" type="image" src="img/Electrico.png">
+  </td>
+  <td value="Fisico">
+    <p hidden>Fisico</p><input class="tipo2" type="image" src="img/Fisico.png">
+  </td>
+  <td value="Voltio Cruel">
+    <g>Voltio Cruel</g>
+  </td>
+  <td><select data-width="fit" class="selectpicker" size="1" id="potZebstrika">
+      <option value="125">125</option>
+      <option value="131">131</option>
+      <option value="137">137</option>
+      <option value="143">143</option>
+      <option value="150">150</option>
+    </select>
+  </td>
+  <td><input disabled size="7" class="input2" id="ptsZebstrika"></td>
+  <td><output id="perZebstrika"></output></td>
+</tr>
+
+
+<!--Feraligatr a-->
+<tr>
+  <td>
+    <details>
+      <lit hidden>Feraligatr</lit>
+      <summary class="first" value="Feraligatr">Feraligatr</summary><br>
+      <table class="avanzado">
+        <tbody>
+          <tr>
+            <td>Crítico</td>
+            <td><input id="criFeraligatr" type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>Aumento</td>
+            <td><select class="selectpicker" data-width="fit" id="aumFeraligatr">
+                <option value="1">0</option>
+                <option value="1.25">+1</option>
+                <option value=1.4>+2</option>
+                <option value="1.5">+3</option>
+                <option value="1.6">+4</option>
+                <option value="1.7">+5</option>
+                <option value="1.8">+6</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>TC +Pot</td>
+            <td><input size="4" maxlength="2" class="input1" size="3" id="maspFeraligatr"></td>
+          </tr>
+          <tr>
+            <td>TC +Atq</td>
+            <td><input size="4" maxlength="3" class="input1" size="3" id="masaFeraligatr"></td>
+          </tr>
+          <tr>
+            <td>Pasiva def.</td>
+            <td>
+              <select class="selectpicker" data-width="fit" id="pasdFeraligatr">
+                <option value="1">Ninguna</option>
+                <option value="1.5">Danza Lluvia</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>+Pasiva</td>
+            <td>
+              <select class="selectpicker" data-width="fit" id="pasFeraligatr">
+                <option value="1" selected="selected">Ninguna</option>
+                <option value=1.18>Condensador +3</option>
+                <option value=1.1>Cr. Potente +1</option>
+                <option value="1.2">Cr. Potente +2</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><input type="button" onclick="sunshine()" value="Aceptar"></td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
+  <td><input class="input1" size="4" type="text" maxlength="3" id="atkFeraligatr" name="row-52-age" value="257" placeholder="257"></td>
+  <td><input id="tipoFeraligatr" value="Agua" hidden>
+    <p hidden>Agua</p><input value="Agua" class="tipo" type="image" src="img/Agua.png">
+  </td>
+  <td value="Fisico">
+    <p hidden>Fisico</p><input class="tipo2" type="image" src="img/Fisico.png">
+  </td>
+  <td value="Megapatada">
+    <g>Megapatada</g>
+  </td>
+  <td><select data-width="fit" class="selectpicker" size="1" id="potFeraligatr">
+      <option value="167">167</option>
+      <option value="175">175</option>
+      <option value="183">183</option>
+      <option value="192">192</option>
+      <option value="200">200</option>
+    </select>
+  </td>
+  <td><input disabled size="7" class="input2" id="ptsFeraligatr"></td>
+  <td><output id="perFeraligatr"></output></td>
+</tr>
+
+
+<!--Rayquaza a-->
+<tr>
+  <td>
+    <details>
+      <lit hidden>Rayquaza</lit>
+      <summary class="first" value="Rayquaza">Rayquaza</summary><br>
+      <table class="avanzado">
+        <tbody>
+          <tr>
+            <td>Crítico</td>
+            <td><input id="criRayquaza" type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>Aumento</td>
+            <td><select class="selectpicker" data-width="fit" id="aumRayquaza">
+                <option value="1">0</option>
+                <option value="1.25">+1</option>
+                <option value=1.4>+2</option>
+                <option value="1.5">+3</option>
+                <option value="1.6">+4</option>
+                <option value="1.7">+5</option>
+                <option value="1.8">+6</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>TC +Pot</td>
+            <td><input size="4" maxlength="2" class="input1" size="3" id="maspRayquaza"></td>
+          </tr>
+          <tr>
+            <td>TC +Atq</td>
+            <td><input size="4" maxlength="3" class="input1" size="3" id="masaRayquaza"></td>
+          </tr>
+          <tr>
+            <td>Pasiva def.</td>
+            <td>
+              <select class="selectpicker" data-width="fit" id="pasdRayquaza">
+                <option value="1">Ninguna</option>
+                <option value="1.3">Pot. Climática</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>+Pasiva</td>
+            <td>
+              <select class="selectpicker" data-width="fit" id="pasRayquaza">
+                <option value="1" selected="selected">Ninguna</option>
+                <option value=1.18>Condensador +3</option>
+                <option value=1.1>Cr. Potente +1</option>
+                <option value="1.2">Cr. Potente +2</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td><input type="button" onclick="sunshine()" value="Aceptar"></td>
+          </tr>
+        </tbody>
+      </table>
+    </details>
+  <td><input class="input1" size="4" type="text" maxlength="3" id="atkRayquaza" name="row-52-age" value="387" placeholder="387"></td>
+  <td><input id="tipoRayquaza" value="Dragon" hidden>
+    <p hidden>Dragon</p><input value="Dragon" class="tipo" type="image" src="img/Dragon.png">
+  </td>
+  <td value="Especial">
+    <p hidden>Especial</p><input class="tipo2" type="image" src="img/Especial.png">
+  </td>
+  <td value="Cometa Draco">
+    <g>Cometa Draco</g>
+  </td>
+  <td><select data-width="fit" class="selectpicker" size="1" id="potRayquaza">
+    <option value="136">136</option>
+    <option value="142">142</option>
+    <option value="149">149</option>
+    <option value="156">156</option>
+    <option selected value="163">163</option>
+    </select>
+  </td>
+  <td><input disabled size="7" class="input2" id="ptsRayquaza"></td>
+  <td><output id="perRayquaza"></output></td>
+</tr>
+
+<!--Grachomp-->
+
+<tr>
+ <td><lit hidden>Garchomp</lit>
+  <details>
+    <summary class="first" value="Garchomp">Garchomp</summary><br>
+    <table class="avanzado">
+      <tbody>
+        <tr>
+          <td>Crítico</td>
+          <td><input id="criGarchomp" type="checkbox"></td>
+        </tr>
+        <tr>
+          <td>Aumento</td>
+          <td><select class="selectpicker" data-width="fit" id="aumGarchomp">
+              <option value="1">0</option>
+              <option value="1.25">+1</option>
+              <option value=1.4>+2</option>
+              <option value="1.5">+3</option>
+              <option style="background:#aaa"  value="1.6">+4</option>
+              <option value="1.7">+5</option>
+              <option value="1.8">+6</option>
+            </select>
+         </td>
+        </tr>
+        <tr>
+          <td>TC +Pot</td>
+          <td><input size="4" maxlength="2" class="input1" size="3" id="maspGarchomp"></td>
+        </tr>
+        <tr>
+          <td>TC +Atq</td>
+          <td><input size="4" maxlength="3" class="input1" size="3" id="masaGarchomp"></td>
+        </tr>
+        <tr>
+          <td>Pasiva def.</td>
+          <td>
+            <select class="selectpicker" data-width="fit" id="pasdGarchomp">
+              <option value="1">Ninguna</option>
+              <option value="1.5">Pot. Arena +5</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>+Pasiva</td>
+          <td>
+            <select class="selectpicker" data-width="fit" id="pasGarchomp">
+            <option value="1" selected="selected">Ninguna</option>
+            <option value=1.18>Condensador +3</option>
+            <option value=1.1>Cr. Potente +1</option>
+            <option value="1.2">Cr. Potente +2</option>
+          </select>
+         </td>
+         </tr>
+         <tr>
+           <td><input type="button" onclick="sunshine()" value="Aceptar"></td>
+         </tr>
+       </tbody>
+    </table>
+    </details>
+  <td><input class="input1" size="4" type="text" maxlength="3" id="atkGarchomp" name="row-52-age" value="331" placeholder="331"></td>
+  <td><input id="tipoGarchomp" value="Tierra" hidden>
+      <p hidden>Tierra</p><input value="Tierra" class="tipo" type="image" src="img/Tierra.png"></td>
+  <td value="Fisico">
+    <p hidden>Fisico</p><input class="tipo2" type="image" src="img/Fisico.png">
+  </td>
+  <td value="Terremoto">
+    <g>Terremoto</g>
+  </td>
+  <td><select data-width="fit" class="selectpicker" size="1" id="potGarchomp">
+      <option selected value="100">100</option>
+      <option value="105">105</option>
+      <option value="110">110</option>
+      <option value="115">115</option>
+      <option value="120">120</option>
+    </select>
+  </td>
+  <td><input disabled size="7" class="input2" id="ptsGarchomp"></td>
+  <td><output id="perGarchomp" ></output></td>
+  </tr>
+
+  <!--Grachomp-->
+
+  <tr>
+   <td><lit hidden>MegaGarchomp</lit>
+    <details>
+      <summary class="first" value="MegaGarchomp">Mega-Garchomp</summary><br>
+      <table class="avanzado">
+        <tbody>
+          <tr>
+            <td>Crítico</td>
+            <td><input id="criMegaGarchomp" type="checkbox"></td>
+          </tr>
+          <tr>
+            <td>Aumento</td>
+            <td><select class="selectpicker" data-width="fit" id="aumMegaGarchomp">
+                <option value="1">0</option>
+                <option value="1.25">+1</option>
+                <option value=1.4>+2</option>
+                <option value="1.5">+3</option>
+                <option style="background:#aaa"  value="1.6">+4</option>
+                <option value="1.7">+5</option>
+                <option value="1.8">+6</option>
+              </select>
+           </td>
+          </tr>
+          <tr>
+            <td>TC +Pot</td>
+            <td><input size="4" maxlength="2" class="input1" size="3" id="maspMegaGarchomp"></td>
+          </tr>
+          <tr>
+            <td>TC +Atq</td>
+            <td><input size="4" maxlength="3" class="input1" size="3" id="masaMegaGarchomp"></td>
+          </tr>
+          <tr>
+            <td>Pasiva def.</td>
+            <td>
+              <select class="selectpicker" data-width="fit" id="pasdMegaGarchomp">
+                <option value="1">Ninguna</option>
+                <option value="1.5">Pot. Arena +5</option>
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td>+Pasiva</td>
+            <td>
+              <select class="selectpicker" data-width="fit" id="pasMegaGarchomp">
+              <option value="1" selected="selected">Ninguna</option>
+              <option value=1.18>Condensador +3</option>
+              <option value=1.1>Cr. Potente +1</option>
+              <option value="1.2">Cr. Potente +2</option>
+            </select>
+           </td>
+           </tr>
+           <tr>
+             <td><input type="button" onclick="sunshine()" value="Aceptar"></td>
+           </tr>
+         </tbody>
+      </table>
+      </details>
+    <td><input class="input1" size="4" type="text" maxlength="3" id="atkMegaGarchomp" name="row-52-age" value="397" placeholder="397"></td>
+    <td><input id="tipoMegaGarchomp" value="Tierra" hidden>
+        <p hidden>Tierra</p><input value="Tierra" class="tipo" type="image" src="img/Tierra.png"></td>
+    <td value="Fisico">
+      <p hidden>Fisico</p><input class="tipo2" type="image" src="img/Fisico.png">
+    </td>
+    <td value="Terremoto">
+      <g>Terremoto</g>
+    </td>
+    <td><select data-width="fit" class="selectpicker" size="1" id="potMegaGarchomp">
+        <option selected value="100">100</option>
+        <option value="105">105</option>
+        <option value="110">110</option>
+        <option value="115">115</option>
+        <option value="120">120</option>
+      </select>
+    </td>
+    <td><input disabled size="7" class="input2" id="ptsMegaGarchomp"></td>
+    <td><output id="perMegaGarchomp" ></output></td>
+    </tr>
+
+    <!--Emboar-->
+
+    <tr>
+     <td><lit hidden>Emboar</lit>
+      <details>
+        <summary class="first" value="Emboar">Emboar</summary><br>
+        <table class="avanzado">
+          <tbody>
+            <tr>
+              <td>Crítico</td>
+              <td><input id="criEmboar" type="checkbox"></td>
+            </tr>
+            <tr>
+              <td>Aumento</td>
+              <td><select class="selectpicker" data-width="fit" id="aumEmboar">
+                  <option value="1">0</option>
+                  <option value="1.25">+1</option>
+                  <option value=1.4>+2</option>
+                  <option value="1.5">+3</option>
+                  <option style="background:#aaa"  value="1.6">+4</option>
+                  <option value="1.7">+5</option>
+                  <option value="1.8">+6</option>
+                </select>
+             </td>
+            </tr>
+            <tr>
+              <td>TC +Pot</td>
+              <td><input size="4" maxlength="2" class="input1" size="3" id="maspEmboar"></td>
+            </tr>
+            <tr>
+              <td>TC +Atq</td>
+              <td><input size="4" maxlength="3" class="input1" size="3" id="masaEmboar"></td>
+            </tr>
+            <tr>
+              <td>Pasiva def.</td>
+              <td>
+                <select class="selectpicker" data-width="fit" id="pasdEmboar">
+                  <option value="1">Ninguna</option>
+                  <option value="1.5">Día Soleado</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>+Pasiva</td>
+              <td>
+                <select class="selectpicker" data-width="fit" id="pasEmboar">
+                <option value="1" selected="selected">Ninguna</option>
+                <option value=1.18>Condensador +3</option>
+                <option value=1.1>Cr. Potente +1</option>
+                <option value="1.2">Cr. Potente +2</option>
+              </select>
+             </td>
+             </tr>
+             <tr>
+               <td><input type="button" onclick="sunshine()" value="Aceptar"></td>
+             </tr>
+           </tbody>
+        </table>
+        </details>
+      <td><input class="input1" size="4" type="text" maxlength="3" id="atkEmboar" name="row-52-age" value="357" placeholder="357"></td>
+      <td><input id="tipoEmboar" value="Fuego" hidden>
+          <p hidden>Fuego</p><input value="Fuego" class="tipo" type="image" src="img/Fuego.png"></td>
+      <td value="Fisico">
+        <p hidden>Fisico</p><input class="tipo2" type="image" src="img/Fisico.png">
+      </td>
+      <td value="Envite Ígneo">
+        <g>Envite Ígneo</g>
+      </td>
+      <td><select data-width="fit" class="selectpicker" size="1" id="potEmboar">
+          <option selected value="123">123</option>
+          <option value="129">129</option>
+          <option value="135">135</option>
+          <option value="141">141</option>
+          <option value="147">147</option>
+        </select>
+      </td>
+      <td><input disabled size="7" class="input2" id="ptsEmboar"></td>
+      <td><output id="perEmboar" ></output></td>
+      </tr>
+
+      <!--Sylveon-->
+
+      <tr>
+       <td><lit hidden>Sylveon</lit>
+        <details>
+          <summary class="first" value="Sylveon">Sylveon</summary><br>
+          <table class="avanzado">
+            <tbody>
+              <tr>
+                <td>Crítico</td>
+                <td><input id="criSylveon" type="checkbox"></td>
+              </tr>
+              <tr>
+                <td>Aumento</td>
+                <td><select class="selectpicker" data-width="fit" id="aumSylveon">
+                    <option value="1">0</option>
+                    <option value="1.25">+1</option>
+                    <option value=1.4>+2</option>
+                    <option value="1.5">+3</option>
+                    <option style="background:#aaa"  value="1.6">+4</option>
+                    <option value="1.7">+5</option>
+                    <option value="1.8">+6</option>
+                  </select>
+               </td>
+              </tr>
+              <tr>
+                <td>TC +Pot</td>
+                <td><input size="4" maxlength="2" class="input1" size="3" id="maspSylveon"></td>
+              </tr>
+              <tr>
+                <td>TC +Atq</td>
+                <td><input size="4" maxlength="3" class="input1" size="3" id="masaSylveon"></td>
+              </tr>
+              <tr>
+                <td>Pasiva def.</td>
+                <td>
+                  <select class="selectpicker" data-width="fit" id="pasdSylveon">
+                    <option value="1.2">PoT. PS +4</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>+Pasiva</td>
+                <td>
+                  <select class="selectpicker" data-width="fit" id="pasSylveon">
+                  <option value="1" selected="selected">Ninguna</option>
+                  <option value=1.18>Condensador +3</option>
+                  <option value=1.1>Cr. Potente +1</option>
+                  <option value="1.2">Cr. Potente +2</option>
+                </select>
+               </td>
+               </tr>
+               <tr>
+                 <td><input type="button" onclick="sunshine()" value="Aceptar"></td>
+               </tr>
+             </tbody>
+          </table>
+          </details>
+        <td><input class="input1" size="4" type="text" maxlength="3" id="atkSylveon" name="row-52-age" value="325" placeholder="325"></td>
+        <td><input id="tipoSylveon" value="Hada" hidden>
+            <p hidden>Hada</p><input value="Hada" class="tipo" type="image" src="img/Hada.png"></td>
+        <td value="Especial">
+          <p hidden>Especial</p><input class="tipo2" type="image" src="img/Especial.png">
+        </td>
+        <td value="Beso Drenaje">
+          <g>Beso Drenaje</g>
+        </td>
+        <td><select data-width="fit" class="selectpicker" size="1" id="potSylveon">
+            <option selected value="46">46</option>
+            <option value="129">48</option>
+            <option value="135">50</option>
+            <option value="141">52</option>
+            <option value="147">55</option>
+          </select>
+        </td>
+        <td><input disabled size="7" class="input2" id="ptsSylveon"></td>
+        <td><output id="perSylveon"></output></td>
+        </tr>
+
+        <tr>
+        <td><lit hidden>Reuniclus</lit>
+          <details>
+            <summary class="first" value="Reuniclus">Reuniclus</summary><br>
+            <table class="avanzado">
+              <tbody>
+                <tr>
+                  <td>Crítico</td>
+                  <td><input id="criReuniclus" type="checkbox"></td>
+                </tr>
+                <tr>
+                  <td>Aumento</td>
+                  <td><select class="selectpicker" data-width="fit" id="aumReuniclus">
+                      <option value="1">0</option>
+                      <option value="1.25">+1</option>
+                      <option value=1.4>+2</option>
+                      <option value="1.5">+3</option>
+                      <option value="1.6">+4</option>
+                      <option value="1.7">+5</option>
+                      <option value="1.8">+6</option>
+                    </select>
+                 </td>
+                </tr>
+                <tr>
+                  <td>TC +Pot</td>
+                  <td><input size="4" maxlength="2" class="input1" size="3" id="maspReuniclus"></td>
+                </tr>
+                <tr>
+                  <td>TC +Atq</td>
+                  <td><input size="4" maxlength="3" class="input1" size="3" id="masaReuniclus"></td>
+                </tr>
+                <tr>
+                  <td>Pasiva def.</td>
+                  <td>
+                    <select class="selectpicker" data-width="fit" id="pasdReuniclus">
+                      <option value="1">Ninguna</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td>+Pasiva</td>
+                  <td>
+                    <select class="selectpicker" data-width="fit" id="pasReuniclus">
+                    <option value="1" selected="selected">Ninguna</option>
+                    <option value=1.18>Condensador +3</option>
+                    <option value=1.1>Cr. Potente +1</option>
+                    <option value="1.2">Cr. Potente +2</option>
+                  </select>
+                 </td>
+                 </tr>
+                 <tr>
+                   <td><input type="button" onclick="sunshine()" value="Aceptar"></td>
+                 </tr>
+               </tbody>
+            </table>
+            </details>
+          <td><input type="text" class="input1" size="4" type="text" maxlength="3" id="atkReuniclus" name="row-52-age" value="377" placeholder="377"></td>
+          <td><input id="tipoReuniclus" value="Psiquico" hidden>
+              <p hidden>Psiquico</p><input value="Psiquico" class="tipo" type="image" src="img/Psiquico.png"></td>
+          <td value="Especial">
+            <p hidden>Especial</p><input class="tipo2" type="image" src="img/Especial.png">
+          </td>
+          <td value="Psiquico">
+            <g>Psíquico</g>
+          </td>
+          <td><select data-width="fit" class="selectpicker" size="1" id="potReuniclus">
+              <option selected value="99">99</option>
+              <option value="104">104</option>
+              <option value="108">108</option>
+              <option value="113">113</option>
+              <option value="118">118</option>
+            </select>
+          </td>
+          <td><input disabled size="7" class="input2" id="ptsReuniclus"></td>
+          <td><output id="perReuniclus"></output></td>
+          </tr>
+
+          <!--Pidgeot-->
+
+          <tr>
+          <td><lit hidden>Pidgeot</lit>
+            <details>
+              <summary class="first" value="Pidgeot">Pidgeot</summary><br>
+              <table class="avanzado">
+                <tbody>
+                  <tr>
+                    <td>Crítico</td>
+                    <td><input id="criPidgeot" type="checkbox"></td>
+                  </tr>
+                  <tr>
+                    <td>Aumento</td>
+                    <td><select class="selectpicker" data-width="fit" id="aumPidgeot">
+                        <option value="1">0</option>
+                        <option value="1.25">+1</option>
+                        <option value=1.4>+2</option>
+                        <option value="1.5">+3</option>
+                        <option value="1.6">+4</option>
+                        <option value="1.7">+5</option>
+                        <option value="1.8">+6</option>
+                      </select>
+                   </td>
+                  </tr>
+                  <tr>
+                    <td>TC +Pot</td>
+                    <td><input size="4" maxlength="2" class="input1" size="3" id="maspPidgeot"></td>
+                  </tr>
+                  <tr>
+                    <td>TC +Atq</td>
+                    <td><input size="4" maxlength="3" class="input1" size="3" id="masaPidgeot"></td>
+                  </tr>
+                  <tr>
+                    <td>Pasiva def.</td>
+                    <td>
+                      <select class="selectpicker" data-width="fit" id="pasdPidgeot">
+                        <option value="1">Ninguna</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>+Pasiva</td>
+                    <td>
+                      <select class="selectpicker" data-width="fit" id="pasPidgeot">
+                      <option value="1" selected="selected">Ninguna</option>
+                      <option value=1.18>Condensador +3</option>
+                      <option value=1.1>Cr. Potente +1</option>
+                      <option value="1.2">Cr. Potente +2</option>
+                    </select>
+                   </td>
+                   </tr>
+                   <tr>
+                     <td><input type="button" onclick="sunshine()" value="Aceptar"></td>
+                   </tr>
+                 </tbody>
+              </table>
+              </details>
+            <td><input type="text" class="input1" size="4" type="text" maxlength="3" id="atkPidgeot" name="row-52-age" value="380" placeholder="380"></td>
+            <td><input id="tipoPidgeot" value="Volador" hidden>
+                <p hidden>Volador</p><input value="Volador" class="tipo" type="image" src="img/Volador.png"></td>
+            <td value="Especial">
+              <p hidden>Especial</p><input class="tipo2" type="image" src="img/Especial.png">
+            </td>
+            <td value="Aire Afilado">
+              <g>Aire Afilado</g>
+            </td>
+            <td><select data-width="fit" class="selectpicker" size="1" id="potPidgeot">
+                <option selected value="43">43</option>
+                <option value="45">45</option>
+                <option value="47">47</option>
+                <option value="49">49</option>
+                <option value="51">51</option>
+              </select>
+            </td>
+            <td><input disabled size="7" class="input2" id="ptsPidgeot"></td>
+            <td><output id="perPidgeot"></output></td>
+            </tr>
+
+            <!--MegaPidgeot-->
+
+            <tr>
+            <td><lit hidden>Mega-Pidgeot</lit>
+              <details>
+                <summary class="first" value="MegaPidgeot">Mega-Pidgeot</summary><br>
+                <table class="avanzado">
+                  <tbody>
+                    <tr>
+                      <td>Crítico</td>
+                      <td><input id="criMegaPidgeot" type="checkbox"></td>
+                    </tr>
+                    <tr>
+                      <td>Aumento</td>
+                      <td><select class="selectpicker" data-width="fit" id="aumMegaPidgeot">
+                          <option value="1">0</option>
+                          <option value="1.25">+1</option>
+                          <option value=1.4>+2</option>
+                          <option value="1.5">+3</option>
+                          <option value="1.6">+4</option>
+                          <option value="1.7">+5</option>
+                          <option value="1.8">+6</option>
+                        </select>
+                     </td>
+                    </tr>
+                    <tr>
+                      <td>TC +Pot</td>
+                      <td><input size="4" maxlength="2" class="input1" size="3" id="maspMegaPidgeot"></td>
+                    </tr>
+                    <tr>
+                      <td>TC +Atq</td>
+                      <td><input size="4" maxlength="3" class="input1" size="3" id="masaMegaPidgeot"></td>
+                    </tr>
+                    <tr>
+                      <td>Pasiva def.</td>
+                      <td>
+                        <select class="selectpicker" data-width="fit" id="pasdMegaPidgeot">
+                          <option value="1">Ninguna</option>
+                        </select>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>+Pasiva</td>
+                      <td>
+                        <select class="selectpicker" data-width="fit" id="pasMegaPidgeot">
+                        <option value="1" selected="selected">Ninguna</option>
+                        <option value=1.18>Condensador +3</option>
+                        <option value=1.1>Cr. Potente +1</option>
+                        <option value="1.2">Cr. Potente +2</option>
+                      </select>
+                     </td>
+                     </tr>
+                     <tr>
+                       <td><input type="button" onclick="sunshine()" value="Aceptar"></td>
+                     </tr>
+                   </tbody>
+                </table>
+                </details>
+              <td><input type="text" class="input1" size="4" type="text" maxlength="3" id="atkMegaPidgeot" name="row-52-age" value="455" placeholder="455"></td>
+              <td><input id="tipoMegaPidgeot" value="Volador" hidden>
+                  <p hidden>Volador</p><input value="Volador" class="tipo" type="image" src="img/Volador.png"></td>
+              <td value="Especial">
+                <p hidden>Especial</p><input class="tipo2" type="image" src="img/Especial.png">
+              </td>
+              <td value="Vendaval">
+                <g>Vendaval</g>
+              </td>
+              <td><select data-width="fit" class="selectpicker" size="1" id="potMegaPidgeot">
+                  <option selected value="126">126</option>
+                  <option value="132">132</option>
+                  <option value="138">138</option>
+                  <option value="144">144</option>
+                  <option value="151">151</option>
+                </select>
+              </td>
+              <td><input disabled size="7" class="input2" id="ptsMegaPidgeot"></td>
+              <td><output id="perMegaPidgeot"></output></td>
+              </tr>
+
+
+
+
+
+
+
+          </tbody>
+
+        </div>
+      </table>
+    </div>
+    </div>
+  </body>
+  <script src="js/main.js"></script>
+  <script src="js/calculo.js"></script>
+</html>

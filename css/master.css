@@ -1,0 +1,102 @@
+@@font-face {
+  font-family: neitor;
+  src: url(Neutro-Medium.ttf);
+}
+body {
+  margin-top: 80px;
+
+}
+
+.zero{
+  width: 100%;
+}
+#users {
+  background-color:r ed;
+  width: 100%;
+}
+
+#selectField {
+
+}
+.container {
+  background-color:bla ck ;
+  padding-top: 40px;
+}
+
+th{
+}
+details {
+outline: 0;
+margin: 0rem;
+}
+
+summary {
+  font-weight: bold;
+  list-style-image: none;
+  outline: 0;
+}
+
+summary::-webkit-details-marker {
+  background: none;
+  color: transparent;
+}
+
+g {
+}
+
+input {
+  outline: 0;
+}
+
+.input1 {
+  text-align: center;
+  border: 0;
+  background-color: #F8F9FB;
+  outline: 0;
+  border-radius: 10px;
+}
+
+.input2 {
+  text-align: center;
+  font-weight: bold;
+  border: 0;
+  color: #f8f9fb;
+  background-color: #444;
+  outline: 0;
+  border-radius: 10px;
+}
+
+
+.first {
+  float: left;
+}
+
+select {
+  outline: 0;
+}
+option {
+  outline: 0;
+}
+
+#example_filter input {
+  border-radius: 5px;
+  outline: 0;
+  border: 0;
+  background-color: #eee;
+  border: 0;
+  border: 1px solid #666;
+}
+
+
+
+
+
+.tipo {
+  padding-top:6px;
+  width:18px
+}
+
+.tipo2 {
+  width:27px;
+  padding-top:6px
+}

@@ -1,0 +1,13 @@
+@@font-face {
+  font-family: neitor;
+  src: url(Neutro-Medium.ttf);
+
+  body {
+
+      font-family: neitor;
+
+  }
+
+ .p {
+         font-family: neitor;
+ }
